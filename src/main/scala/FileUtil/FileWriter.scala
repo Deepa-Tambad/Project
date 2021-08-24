@@ -8,7 +8,7 @@ import java.util
 object FileWriter {
 
   def convertJsonToCsv(trainers: Trainers, outputPath: String, errorPath: String): Any = {
-    val fieldTrainersNames = trainers.member.head.productElementNames
+    val fieldTrainersNames = trainers.trainer.head.productElementNames
     val field_Value: List[Trainer] = trainers.trainer
     Try(new PrintWriter(outputPath)) match {
       case Success(value) => {
